@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#343b49">
+  <title>Weather — прогноз погоды</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="photo_5408832649104663019_w.jpg">
+</head>
+<body>
+  <main class="weather-app">
+    <section class="weather-card" aria-label="Прогноз погоды">
+      <div class="hero">
+        <div class="hero-shade"></div>
+        <div class="hero-top">
+          <p class="weekday" id="weekday">Загрузка...</p>
+          <p class="date" id="date">—</p>
+          <p class="location"><span class="pin">⌖</span><span id="location">Bishkek, KG</span></p>
+        </div>
+        <div class="current-weather">
+          <div class="weather-icon" id="currentIcon">☀</div>
+          <div class="temperature"><span id="temperature">--</span><span class="degree">°C</span></div>
+          <p class="condition" id="condition">Загружаем погоду</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="metrics">
+          <div class="metric"><span>ОСАДКИ</span><strong id="precipitation">—</strong></div>
+          <div class="metric"><span>ВЛАЖНОСТЬ</span><strong id="humidity">—</strong></div>
+          <div class="metric"><span>ВЕТЕР</span><strong id="wind">—</strong></div>
+        </div>
+
+        <div class="forecast" id="forecast">
+          <div class="forecast-day active"><span class="small-icon">☀</span><span>...</span><b>—°</b></div>
+          <div class="forecast-day"><span class="small-icon">☁</span><span>...</span><b>—°</b></div>
+          <div class="forecast-day"><span class="small-icon">☂</span><span>...</span><b>—°</b></div>
+          <div class="forecast-day"><span class="small-icon">☀</span><span>...</span><b>—°</b></div>
+        </div>
+
+        <form class="search" id="searchForm">
+          <span class="search-pin">⌖</span>
+          <input id="cityInput" type="search" placeholder="Введите город" aria-label="Название города" autocomplete="off">
+          <button type="submit">Найти</button>
+        </form>
+        <p class="status" id="status" role="status">Погода обновляется автоматически</p>
+      </div>
+    </section>
+    <footer>Данные прогноза: Open-Meteo</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
